@@ -197,7 +197,7 @@ const Value* SkipList<Key, Value>::find(const Key& key) const {
         }
         level--;
     }
-    Node* target = current->forward[0];
+    const Node* target = current->forward[0];
     if (target != nullptr && target->key == key) {
         return &(target->value);
     }
